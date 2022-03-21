@@ -4,7 +4,7 @@ import writers from "./writers";
 function App() {
   return (
     <div className="App">
-      <h1>Writer Profiles</h1>
+      <h1>Writer Profiles.</h1>
       <div className="container">
         {writers.map((writer) => (
 
