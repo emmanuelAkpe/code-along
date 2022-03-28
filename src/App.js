@@ -1,31 +1,34 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import ProfileCard from "./ProfileCard";
+import ProfileCard from "./component/ProfileCard";
+import ProfileForm from "./component/ProfileForm";
 
 
 function App() {
 
-  const [writers, setWriters]=useState([])
+  const [allProfile, setAllProfile] = useState([{
+    firstName:"star",
+    lastName:"Emak",
+    email:"star@gmail.com",
+    phone:"+233 2456789"
+  }])
 
-  useEffect(()=>{
-      const getWriters = async ()=>{
-      const response = await fetch('/writers.json')
-      const data = await response.json()
-      setWriters(data)
+  const submit =(profile)=>{
+    const arr = allProfile
+    arr.push(profile)
+    setAllProfile(arr)
+  }
 
-    }
-
-    getWriters()
-  }, [])
   return (
     <div className="App">
       <h1>Writer Profiles.</h1>
       <div className="container">
-        {writers.map((writer) => (
-
-          <ProfileCard writer={writer} key={writer.id}/>
-
-        ))}
+        <ProfileForm submit={submit}/>
+        {
+          allProfile.map((writer)=>(
+            <ProfileCard key={writer.id} writer={writer}/>
+          ))
+        }
       </div>
     </div>
 
