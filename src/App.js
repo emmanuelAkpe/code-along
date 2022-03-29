@@ -1,37 +1,34 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import ProfileCard from "./component/ProfileCard";
-import ProfileForm from "./component/ProfileForm";
-
+import Axios from "axios";
 
 function App() {
+  const [posts, setPosts] = useState([]);
 
-  const [allProfile, setAllProfile] = useState([{
-    firstName:"star",
-    lastName:"Emak",
-    email:"star@gmail.com",
-    phone:"+233 2456789"
-  }])
+  useEffect(() => {
+    (async () => {
+      let response = await Axios({
+        method: "GET",
+        url: "https://jsonplaceholder.typicode.com/posts",
+      });
 
-  const submit =(profile)=>{
-    const arr = allProfile
-    arr.push(profile)
-    setAllProfile(arr)
-  }
+      setPosts(response.data);
+    })();
+  });
 
   return (
-    <div className="App">
-      <h1>Writer Profiles.</h1>
-      <div className="container">
-        <ProfileForm submit={submit}/>
-        {
-          allProfile.map((writer)=>(
-            <ProfileCard key={writer.id} writer={writer}/>
-          ))
-        }
+    <div className="app">
+      <h1> Daily Posts </h1>
+      <div>
+        <div className="list">
+          {posts.map((post) => (
+            <div key={post.id} className="post">
+              <h3>{post.title}</h3>
+              <p>{post.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-
   );
 }
 
