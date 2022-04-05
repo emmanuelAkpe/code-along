@@ -1,29 +1,32 @@
 import React from "react";
 
 const About = () => {
-  return (
-    <section>
-        <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-        consectetur voluptate quidem nesciunt vero necessitatibus nemo animi,
-        fuga aspernatur delectus tempora libero amet magni. Nisi libero qui
-        doloremque reprehenderit excepturi?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-        consectetur voluptate quidem nesciunt vero necessitatibus nemo animi,
-        fuga aspernatur delectus tempora libero amet magni. Nisi libero qui
-        doloremque reprehenderit excepturi?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-        consectetur voluptate quidem nesciunt vero necessitatibus nemo animi,
-        fuga aspernatur delectus tempora libero amet magni. Nisi libero qui
-        doloremque reprehenderit excepturi?
-      </p>
+    return <section>
+        <h1>Welcome to the Aboutpage</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iste eligendi 
+            fuga. Nostrum modi, voluptatem omnis at, dolorem assumenda accusamus magnam sed impedit, 
+            ipsum minima esse tenetur eaque ad!
+            Iure quo, nulla dolorem nemo fugiat tempora. Aliquam facilis, perspiciatis nulla repellat maiores
+             s labore, quae delectus quam adipisci facere sequi. Placeat?
+        </p>
+      
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iste eligendi 
+            fuga. Nostrum modi, voluptatem omnis at, dolorem assumenda accusamus magnam sed impedit, 
+            ipsum minima esse tenetur eaque ad!
+            Iure quo, nulla dolorem nemo fugiat tempora. Aliquam facilis, perspiciatis nulla repellat maiores
+             s labore, quae delectus quam adipisci facere sequi. Placeat?
+        </p>
+      
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iste eligendi 
+            fuga. Nostrum modi, voluptatem omnis at, dolorem assumenda accusamus magnam sed impedit, 
+            ipsum minima esse tenetur eaque ad!
+            Iure quo, nulla dolorem nemo fugiat tempora. Aliquam facilis, perspiciatis nulla repellat maiores
+             s labore, quae delectus quam adipisci facere sequi. Placeat?
+        </p>
+      
     </section>
-  );
-};
-
+}
 export default About;
